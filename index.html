@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="css/bootstrap.css">
+    <link rel="stylesheet" href="style.css" />
+    <title>Document</title>
+  </head>
+  <body>
+    <div class="container">
+      <header>
+        <h1>CRUD</h1>
+        <h2>PRODUCT MANGEMENT SYSTEM</h2>
+      </header>
+      <div class="inputs">
+        <input type="text" id="title" placeholder="title" />
+        <input
+          type="number"
+          id="price"
+          onkeyup="getTotal()"
+          placeholder="price"
+        />
+        <input
+          type="number"
+          id="taxes"
+          onkeyup="getTotal()"
+          placeholder="taxes"
+        />
+        <input type="number" id="ads" onkeyup="getTotal()" placeholder="ads" />
+        <input
+          type="number"
+          id="discount"
+          onkeyup="getTotal()"
+          placeholder="discount"
+        />
+        <h2 id="total">Total:</h2>
+        <input type="number" id="count" placeholder="count" />
+        <input type="text" id="category" placeholder="category" />
+        <button id="create" type="submit" onclick="showData()">Create</button>
+        <input type="text" onkeyup="searchProduct(this.value)" id="search" placeholder="search" />
+        <div class="search">
+          <button onclick="goodSearch(this.id)" id="searchTitle">Search By Title</button>
+          <button onclick="goodSearch(this.id)" id="searchCategory">Search By Category</button>
+        </div>
+        <button id="clear" onclick="deleteAll()"></button>
+      </div>
+      <table class="table table-dark table-striped">
+        <thead>
+          <tr>
+            <th>ID</th>
+            <th>TITLE</th>
+            <th>PRICE</th>
+            <th>TAXES</th>
+            <th>ADS</th>
+            <th>DISCOUNT</th>
+            <th>TOTAL</th>
+            <th>CATEGORY</th>
+            <th>UPDATE</th>
+            <th>DELETE</th>
+          </tr>
+        </thead>
+        <tbody id="tbody"></tbody>
+      </table>
+    </div>
+    <script src="main.js"></script>
+    <script src="js/bootstrap.js"></script>
+  </body>
+</html>

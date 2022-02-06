@@ -1,0 +1,100 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  color: #fff;
+  font-family: system-ui;
+  transition: 0.3s;
+}
+body {
+  background-color: #222;
+}
+.container {
+  width: 90%;
+  margin: 20px auto;
+  text-align: center;
+}
+header h2 {
+  font-weight: normal;
+}
+.inputs {
+  text-align: left;
+  width: 100%;
+}
+.inputs input {
+  display: inline-block;
+  padding: 15px;
+  font-size: 15px;
+  border-radius: 20px;
+  background-color: #111;
+  border: none;
+  outline: none;
+  margin: 5px 0;
+  width: 100%;
+}
+.inputs input:focus {
+  transform: scale(1.1);
+}
+.inputs #price,
+#taxes,
+#ads,
+#discount,
+#total {
+  width: 19%;
+  display: inline-block;
+}
+#total {
+  background-color: #008696;
+  border-radius: 20px;
+  width: fit-content;
+  padding: 4px 8px;
+  font-size: large;
+  margin-left: 5px;
+}
+button {
+  background-color: #390053;
+  width: 100%;
+  padding: 8px;
+  margin: 5px 0;
+  border-radius: 20px;
+  border: none;
+  cursor: pointer;
+  transition: 0.5s;
+}
+.inputs button {
+  font-size: 20px;
+}
+button:hover {
+  letter-spacing: 2px;
+  background-color: #55047a;
+}
+.search {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.search button {
+  width: 45%;
+}
+table {
+  width: 100%;
+  margin-top: 20px;
+  font-size: 20px;
+}
+table thead th {
+  padding: 0 6px;
+}
+table button {
+  width: 80%;
+}
+#clear {
+  display: none;
+  margin: 15px 0;
+}
+
+@media (max-width: 768px) {
+  table {
+    font-size: 10px;
+    
+  }
+}
